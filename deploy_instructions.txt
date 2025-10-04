@@ -1,0 +1,19 @@
+Local deploy notes:
+
+1. Activate the venv and run locally:
+   .\.venv\Scripts\Activate.ps1
+   pip install -r requirements.txt
+   python dashboard.py
+
+2. To deploy to Heroku manually:
+   heroku create <app-name>
+   git push heroku main
+
+3. To use the GitHub Actions workflow, add these repository secrets:
+   - HEROKU_API_KEY
+   - HEROKU_APP_NAME
+   - HEROKU_EMAIL
+
+Heroku tips:
+- Use a small dyno for free/low cost testing (Hobby dynos are recommended for persistent availability).
+- Store large datasets outside the repo (S3 or Azure Blob) and fetch at runtime.
