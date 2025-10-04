@@ -379,7 +379,7 @@ def sync_dropdown_on_click(clickData):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run_server(debug=True)
 import pandas as pd
 import dash
 from dash import dcc, html, Input, Output
